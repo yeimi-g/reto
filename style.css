@@ -53,7 +53,7 @@ input {
     margin-top: 0.7rem;
     display: grid;
     grid-template-columns: 144px 144xp;
-    row-gap: 2rem;
+    row-gap: 2em;
     column-gap: 18px;
     margin-bottom: 2rem;
 }
@@ -68,4 +68,16 @@ input {
     font-size: 24px;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.active-tip {
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(172, 67%, 45%);
+    font-weight: bolder;
+}
+
+.people-input {
+    background-image: url(images/icon-person.svg);
+    margin-bottom: 2.4rem;
+    
 }
