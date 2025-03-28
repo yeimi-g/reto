@@ -118,3 +118,18 @@ input {
     cursor: pointer;
 }
 
+#tip-custom input{
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.peeplelabel{
+    display: flex;
+    justify-content: space-between;
+}
+
+.error{
+    color: red;
+    display: none;
+}
+
