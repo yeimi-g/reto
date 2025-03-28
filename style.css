@@ -7,7 +7,7 @@ body{
     height: 100vh;
     width: 100%;
     background-color: hsl(185, 41%, 84%);
-    front-family: "Space Mono", monospace;
+    font-family: "Space Mono", monospace;
 }
 
 .logo{
@@ -25,7 +25,21 @@ body{
 
 label{
     color: hsl(186, 14%, 43%);7
-    front-family: 700;
+    font-family: 700;
     margin-bottom: 0.3rem;
 }
 
+input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    padding-right: 18px;
+    background-position: 17px 15px;
+    background-repeat: no-repeat;
+    background-color: hsl(189, 47%, 97%);
+    text-align: right;
+    font-size: 24px;
+    color: hsl(183, 100%, 15%);
+    font-weight: bolder;
+    font-family: "Space Mono", monospace;
+}
