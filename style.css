@@ -116,6 +116,9 @@ input {
     padding: 9px 0 9px 0;
     border-radius: 5px;
     cursor: pointer;
+    background-color: hsl(172, 67%, 45%);
+    border: none;
+    width: 100%;
 }
 
 #tip-custom input{

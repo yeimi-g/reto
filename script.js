@@ -16,8 +16,9 @@ peopleInput.value = "1";
 tipPerPerson.innerHTML = "$" + (0.0).toFixed(2);
 totalPerPerson.innerHTML = "$" + (0.0).toFixed(2);
 
-let billValue = "0.0"
-let peopleValue = "1";
+let billValue = 0.0;
+let peopleValue = 1;
+let tipValue = 0.15;
 
 function billInputFun{
     billValue = parseFloat(billInput.value)
@@ -34,6 +35,8 @@ function handlClick(event) {
         val.classList.remove("active-tip");
         if (event.target.innerHTML ==vla.innerHTML){
             val.classList.add("active-tip");
+            tipValue = parseFloat(val.innerHTML)/100
         }
-    }
+    };
+    console.log(tipValue);
 }
