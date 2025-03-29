@@ -3,16 +3,16 @@ const peopleInput = document.querySelector(".people-input");
 const tipPerPerson = document.getElementById("tip-amount");
 const totalPerPerson = document.getElementById("total-amount");
 const tips = document.querySelectorAll(".tips");
-const tipCustom = document.querySelector(".tip-cusom");
+const tipCustom = document.querySelector(".tip-custom");
 const resetBtn = document.querySelector(".reset");
 const error = document.querySelector(".error");
 
 
 billInput.addEventListener("input", billInputFun);
 peopleInput.addEventListener("input", peopleInputFun);
-tips.forEach(function(val)) {
+tips.forEach(function(val) {
     val.addEventListener('click', handlClick);
-}
+});
 tipCustom.addEventListener('input', tipInputFun);
 resetBtn.addEventListener("click", reset);
 
@@ -25,12 +25,12 @@ let billValue = 0.0;
 let peopleValue = 1;
 let tipValue = 0.15;
 
-function billInputFun{
+function billInputFun (){
     billValue = parseFloat(billInput.value);
     calculateTip();
 }
 
-function peopleInputFun{
+function peopleInputFun (){
     peopleValue = parseFloat(peopleInput.value);
     console.log(peopleValue);
 
@@ -46,7 +46,7 @@ function peopleInputFun{
 }
 
 function tipInputFun(){
-    tipValue=parseFloat(tipCustom.value / 100);
+    tipValue=parseFloat(tipCustom.value) / 100;
 
     tip.forEach(function(val)){
         val.classList.remove("active-tip");
@@ -54,21 +54,21 @@ function tipInputFun(){
     calculateTip();
 }
 
-function handlClick(event) {
-    tips.forEach(function(val)){
+function handlClick (event) {
+    tips.forEach(function(val){
         val.classList.remove("active-tip");
-        if (event.target.innerHTML ==vla.innerHTML){
+        if (event.target.innerHTML == val.innerHTML){
             val.classList.add("active-tip");
             tipValue = parseFloat(val.innerHTML)/100
         }
-    };
+    });
     console.log(tipValue);
 }
 
 function calculateTip(){
     if(peopleValue >= 1){
         let tipAmount = (billValue *  tipValue) / peopleValue;
-        let total = (billValue * tipAmount) / peopleValue;
+        let total = (billValue + (billValue * tipAmount)) / peopleValue;
         tipPerPerson.innerHTML = "$" + tipAmount.toFixed(2);
         totalPerPerson.innerHTML = "$" + total.toFixed(2);
     }
